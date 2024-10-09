@@ -1,4 +1,6 @@
 {
   "is-main": true,
-  "import": []
+  "import": [
+    "moonbitlang/showcase-fft/lib"
+  ]
 }
