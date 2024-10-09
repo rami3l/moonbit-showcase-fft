@@ -88,9 +88,8 @@ fn generate_data(data_dir: &Path, len: usize, output_files: bool) -> Result<Vec<
 
 fn main() -> Result<()> {
     let sizes = &[
-        // 4, 64, 256, 1024,
-        4096,
-        // 16384,
+        // 4, 64, 256, 1024, 4096,
+        16384,
     ];
 
     let cwd = env::current_dir()?;

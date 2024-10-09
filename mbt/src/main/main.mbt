@@ -12,7 +12,7 @@ fn main {
   //   let imag = @strconv.parse_double!(parts[1])
   //   signals.push({ real, imag })
   // }
-  let signals = generate_inputs(4096)
+  let signals = generate_inputs(16384)
   @lib.fft(signals)
   for signal in signals {
     println("\{round(signal.real)},\{round(signal.imag)}")
