@@ -1,25 +1,11 @@
 typealias Complex = @lib.Complex
 
 fn main {
-  // try {
-  // let in_str = @fs.read_file_to_string!(path="/dev/stdin")
-  // Read the input signal from stdin, one signal per line,
-  // where `X,Y` means `X + Yi`.
-  // let signals : Array[Complex] = []
-  // for line in in_str.split("\n") {
-  //   let parts = line.split(",").take(2).to_array()
-  //   let real = @strconv.parse_double!(parts[0])
-  //   let imag = @strconv.parse_double!(parts[1])
-  //   signals.push({ real, imag })
-  // }
   let signals = generate_inputs(16384)
   @lib.fft(signals)
   for signal in signals {
     println("\{round(signal.real)},\{round(signal.imag)}")
   }
-  // } catch {
-  //   _err => abort("ERROR")
-  // }
 }
 
 fn round(n : Double) -> Double {
